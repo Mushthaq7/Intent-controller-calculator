@@ -311,29 +311,3 @@ Feel free to extend the controller with:
 ## License
 
 This project is open source and available under the MIT License.
-
-def decide_action(self, intent, missing_info, extracted_info):
-if missing_info:
-return ActionType.ASK_FOR_INFO # Ask follow-up questions
-elif intent in self.api_endpoints:
-return ActionType.CALL_API # Call calculator, weather API, etc.
-else:
-return ActionType.ANSWER_DIRECTLY # Provide direct response
-
-Extracted Info → Required Fields Check → Missing Fields List
-
-Missing Info? → Yes: Ask for Info
-→ No: Has API? → Yes: Call API
-→ No: Answer Directly
-
-Input: "from kualalumpur to kochi on july 1 2025"
-↓
-Intent Detection: "book_flight" (keywords, confidence: 0.7)
-↓
-Info Extraction: origin="kualalumpur", destination="kochi", date="july 1 2025"
-↓
-Missing Info Check: [] (all required fields present)
-↓
-Action Decision: CALL_API (flight_booking_api)
-↓
-Execution: "Flight booked from kualalumpur to kochi on july 1 2025"
