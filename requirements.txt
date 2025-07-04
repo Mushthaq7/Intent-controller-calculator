@@ -1,0 +1,8 @@
+# Core dependencies for the Intent Controller
+# No external dependencies required - uses only Python standard library
+# Python 3.7+ recommended for type hints and f-strings
+
+# Optional dependencies for enhanced functionality:
+# requests>=2.25.0  # For real API calls
+# python-dotenv>=0.19.0  # For environment variable management
+# pydantic>=1.8.0  # For data validation (optional) 
